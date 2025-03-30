@@ -5,7 +5,7 @@ return { -- Collection of various small independent plugins/modules
     --
     -- Examples:
     --  - va)  - [V]isually select [A]round [)]paren
-    --  - yinq - [Y]ank [I]nside [N]ext [']quote
+    --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
     --  - ci'  - [C]hange [I]nside [']quote
     require('mini.ai').setup { n_lines = 500 }
 
@@ -20,7 +20,9 @@ return { -- Collection of various small independent plugins/modules
     --  You could remove this setup call if you don't like it,
     --  and try some other statusline plugin
     local statusline = require 'mini.statusline'
-    statusline.setup({ use_icons = vim.g.have_nerd_font })
+    statusline.setup { use_icons = true }
+    -- set use_icons to true if you have a Nerd Font
+    statusline.setup { use_icons = vim.g.have_nerd_font }
 
     -- You can configure sections in the statusline by overriding their
     -- default behavior. For example, here we set the section for
